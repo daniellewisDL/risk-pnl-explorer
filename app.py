@@ -37,18 +37,18 @@ def header():
     st.sidebar.title('Desk and limit selection')
 
 
-#@st.cache
+@st.cache
 def get_desk_data():
     desks = pd.read_csv("./data/desks.csv")
     return desks
 
-#@st.cache
+@st.cache
 def get_pnl_data():
     pnl_data = pd.read_csv("./data/pnl.csv")
     pnl_data['date'] = pd.to_datetime(pnl_data['date'], dayfirst=True)
     return pnl_data
 
-#@st.cache
+@st.cache
 def get_risk_data():
     risk_data = pd.read_csv("./data/risk.csv")
     risk_data['date'] = pd.to_datetime(risk_data['date'], dayfirst=True)
